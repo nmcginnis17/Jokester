@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,35 +18,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJp-0t-Pzd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="119" width="374" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.67450980390000004" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pms-gG-ZUd">
-                                <rect key="frame" x="10" y="802" width="394" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="10" y="788" width="394" height="44"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapNewJokeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtz-9T-YW2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYE-Dt-F6j">
+                                <rect key="frame" x="10" y="724" width="394" height="44"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapShowAnswerBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vy0-tY-a7I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-Nc-jeq">
+                                <rect key="frame" x="20" y="317" width="374" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gSo-Nc-jeq" secondAttribute="trailing" constant="20" id="3eD-OP-EcW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJp-0t-Pzd" secondAttribute="trailing" constant="20" id="6oC-6Z-Iab"/>
                             <constraint firstItem="Pms-gG-ZUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8aw-HA-Gfm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJp-0t-Pzd" secondAttribute="trailing" id="DYb-FO-Bf8"/>
-                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HXY-6g-zGI"/>
-                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O7Y-VI-aXD"/>
-                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RoL-F5-taA"/>
+                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T7H-oM-bD2"/>
+                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="W03-h6-XL9"/>
+                            <constraint firstItem="gSo-Nc-jeq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c76-l3-UNy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pms-gG-ZUd" secondAttribute="bottom" constant="30" id="cIu-gt-KTg"/>
-                            <constraint firstItem="WJp-0t-Pzd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRf-wZ-dTQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zYE-Dt-F6j" secondAttribute="trailing" constant="10" id="cmC-Cv-5uO"/>
+                            <constraint firstItem="Pms-gG-ZUd" firstAttribute="top" secondItem="zYE-Dt-F6j" secondAttribute="bottom" constant="20" id="fxI-x4-qoH"/>
+                            <constraint firstItem="gSo-Nc-jeq" firstAttribute="top" secondItem="WJp-0t-Pzd" secondAttribute="bottom" constant="150" id="r8Y-e6-OFA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pms-gG-ZUd" secondAttribute="trailing" constant="10" id="tZe-bZ-mEf"/>
+                            <constraint firstItem="zYE-Dt-F6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="x9o-M3-zMu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerView" destination="gSo-Nc-jeq" id="yKz-Nb-6Vi"/>
                         <outlet property="jokeView" destination="WJp-0t-Pzd" id="VY2-xf-dnc"/>
                         <outlet property="newJokeBtn" destination="Pms-gG-ZUd" id="W57-Up-noR"/>
+                        <outlet property="showAnswerBtn" destination="zYE-Dt-F6j" id="84a-HB-ceU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,6 +82,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
 	@IBOutlet weak var jokeView: UILabel!
+	@IBOutlet weak var answerView: UILabel!
+	@IBOutlet weak var showAnswerBtn: UIButton!
 	@IBOutlet weak var newJokeBtn: UIButton!
 	
 	private var dataTask: URLSessionDataTask?
@@ -17,8 +19,10 @@ class ViewController: UIViewController {
 	private var joke: Joke? {
 		didSet {
 			guard let joke = joke else { return }
-			jokeView.text = "\(joke.setup)\n\(joke.punchline)"
+			jokeView.text = "\(joke.setup)"
 			jokeView.sizeToFit()
+			answerView.text = "\(joke.punchline)"
+			answerView.sizeToFit()
 		}
 	}
 	
@@ -26,6 +30,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		jokeView.text = "Want to Hear A Joke?"
+		answerView.isHidden = true
+		showAnswerBtn.isHidden = true
 		newJokeBtn.setTitle("New Joke", for: .normal)
 	}
 
@@ -45,8 +51,16 @@ class ViewController: UIViewController {
 		dataTask?.resume()
 	}
 	
+	@IBAction func didTapShowAnswerBtn(_ sender: Any) {
+		answerView.isHidden = false
+		showAnswerBtn.isHidden = true
+	}
+	
 	@IBAction func didTapNewJokeBtn(_ sender: Any) {
+		answerView.isHidden = true
 		loadData()
+		showAnswerBtn.isHidden = false
+		showAnswerBtn.setTitle("Show Answer", for: .normal)
 	}
 }
 
